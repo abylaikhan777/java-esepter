@@ -1,0 +1,53 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#click {
+    transition: 10s all;
+}
+
+#div {
+    border: 2px solid ;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    border-radius: 10px;
+}
+#div2 {
+    display: flex;
+    gap: 60px;
+
+}
+#div3 {
+    margin-top: 200px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+
+}
+#sura {
+    background-color: black;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: aliceblue;
+    font-size: small;
+}
+#sura2 {
+    background-color: black;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: aliceblue;
+    font-size: small;
+}
+#dongelek{
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    border-radius: 100%;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">
+        <input id="name" type="text" id="myInput" placeholder="Enter name " >
+        <input id="age" type="text" id="myInput" placeholder="Enter age"  > 
+        <button onclick="nameAge()">Submit</button>
+        <button onclick="alu()">asdf</button>
+        <button onclick="Clear()">asdf</button>
+
+        <h1>zhazba saktau kosimshasi</h1>
+        <textarea name="" id="save" placeholder="shazba zhaz"></textarea>
+        <button id="submit" type="submit" onclick="saktau()">saktau</button>
+
+    </label>
+    <script>
+        function   nameAge() {
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;     
+            localStorage.setItem("name", name);
+            localStorage.setItem("age", age);
+        }
+        function alu() {
+            const name = localStorage.getItem("name");
+            const age = localStorage.getItem("age");
+            if (name && age) {
+                 alert(`senin atyng: ${name} \n shasung: ${age}`);
+            }
+           
+        }
+        function Clear() {
+            localStorage.clear();
+        };
+        
+        function saktau() {
+            const save = document.getElementById("save").value;
+            const newul = document.createElement("ul");
+            const newli = document.createElement("li");
+            localStorage.setItem("save", save);
+            const get = localStorage.getItem(save)
+            if (get) {
+                newli.textContent = get;
+            }
+            newul.appendChild(newli)
+    }
+        
+    </script>
+</body>
+</html>

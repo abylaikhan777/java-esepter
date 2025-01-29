@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function name() {
+        //     let array = [];
+
+        //     while (true) {
+        //         let text = prompt("Enter your name");
+        //         if (text === "stop"){ 
+        //         break;
+        //         }
+        //         array.push(text);
+        //     }
+
+        //     return array;
+        // }
+        // console.log(name());
+
+
+        // let array = [2, 3, 4, 5, 6, 7, 8];
+        
+        // for (let element of array) {
+        //     if (typeof element === `number`){ 
+        //         console.log(element);
+                
+        //     }
+        // }
+        // let namme = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        // namme.forEach(function (element) {
+        //     element *= element;
+        //     console.log(element);
+            
+        // });
+        // let ngr = [1, 2, 3, 4, 5, 6, 7, 8]
+        // let doubled = ngr.map((element) => element * 2);
+        // let squared = ngr.map((element) => element * element)
+        // let halved = ngr.map((element) => element / 2);
+        // console.log(ngr);
+        // console.log(`eki eselengen ${doubled}`);
+        // console.log(`kvadrattalingan : ${squared}`);
+        // console.log(`shartisi : ${halved}`);
+        
+        // let numbers = [40, 2, 59, 4, 5, 6, 50, 100];
+        // let evens = numbers.filter((element) => element % 2 === 0);
+        // let odds = numbers.filter((element) => element % 2!== 0); 
+        // let middle = numbers.filter((element) => element >= 40 && element <= 100 == true);
+        // console.log(numbers);
+        // console.log(`middle : ${middle}`);
+        
+        // let products = ['a', 'b', 'c', 'd', 'e', 'v'];
+         
+        let products = [
+  'Huawei', // → filtered
+  'Apple',  // → x
+  'Samsung', // → filtered
+  'Readmi',  // → x
+  'LG',
+  'Xiaomi',
+  'Honor',
+  'Oppo',
+  'Vivo',
+  'Poco'
+];
+
+function name() {
+    while (true) {
+    let search = prompt("Filter tan'da");
+
+let filteredProducts = products.filter((element) => element.toLowerCase().includes(products));
+
+products.forEach(function(product){console.log(product.toLowerCase())});
+
+    }
+    return products
+}
+console.log(`Тауарлар: ${filteredProducts}`);
+console.log(`Тауар саны: ${filteredProducts.length}`);
+console.log(name());
+
+
+
+
+
+
+ 
+
+
+
+
+        
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="t" style="display: flex; justify-content: center;">
+    <div id="all" style="display: flex;
+    justify-content: center;
+    flex-direction: column;
+   ">
+        <h1 id="timer">00:00</h1>
+    <div class="buttons" style="display: flex;
+    ">
+        <button id="start">start</button>
+        <button id="reset">reset</button>
+    </div>
+    </div>
+</div>
+    <script>
+        let timer = document.querySelector('#timer');
+        let startBtn = document.querySelector('#start');
+        let resetBtn = document.querySelector('#reset');
+        let time = 0;
+        let birbale = false;
+        startBtn.addEventListener('click', () => {
+            startBtn.textContent = 'stop';
+            brbale = true;
+            let interval =  setInterval(() => {
+            time++;
+            timer.textContent = `${Math.floor(time / 60)}:${time % 60 < 10? '0' + time % 60 : time % 60}`;
+             if (startBtn.textContent == 'stop') {
+                clearInterval(interval)
+            }
+            },300);
+           function displayTime() {
+            const minutes = Math.floor(time / 60);
+            const seconds = time % 60;
+            time.textContent =`${padZero(minutes)}:${padZero(seconds)}`;
+           }
+           function padZero() {
+            
+           }
+
+            //         time++;
+            //         timer.textContent = `${Math.floor(time / 60)}:${time % 60 < 10? '0' + time % 60 : time % 60}`;
+            //     }, 300);
+            // if (startBtn.textContent === 'start'){
+            //     startBtn.textContent = 'pause';
+            //   let interval =  setInterval(() => {
+            //         time++;
+            //         timer.textContent = `${Math.floor(time / 60)}:${time % 60 < 10? '0' + time % 60 : time % 60}`;
+            //     }, 300);
+            // } else if (startBtn.textContent === 'pause') {
+            //     console.log("dfdf");
+                
+            //     clearInterval(interval);
+            //     startBtn.textContent = 'start';
+                
+            // }
+
+           
+                    
+            
+        })
+    </script>
+</body>
+</html>

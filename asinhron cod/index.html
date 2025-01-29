@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1 {
+            color: red;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+    <h1 id="sanak">kery sanak</h1>
+    <h1 id="sanad"></h1>
+    <h1 id="ai">5</h1>
+    <h1 id="gh"></h1>
+    <script>
+        let cound = document.querySelector('#sanak');
+        let bold = document.querySelector('#sanad');
+        let time = document.querySelector('#ai');
+        let count = 5;
+        const interval = setInterval(() => {
+            count--;
+            time.textContent = `${count}`
+            if (count === 0) {
+                setTimeout(() => {
+                     
+                      cound.textContent = ``
+                }, 1000);
+              
+             clearInterval(interval);
+
+            }
+        }, 1000);
+        let gh = document.querySelector('#gh');
+        const users = [
+            {id: 1, name: 'John', age: 30},
+            {id: 2, name: 'Alice', age: 25},
+            {id: 3,name: 'Bob', age: 28}
+        ];
+
+        const dd = setTimeout(() => {
+            console.log(users[0]);
+            
+        }, 2000);
+
+        const dt = setTimeout(() => {
+            console.log(users[1]);
+            
+        }, 4000);
+        
+        const df = setTimeout(() => {
+            console.log(users[2]);
+            
+        }, 6000);
+
+
+        let words = [
+            'a',
+            'p',
+            'e',
+            'l',
+            'c',
+            'i',
+            'n',
+        ];
+         const dg = setInterval(() => {
+        words.forEach((word) => {
+            words[word];
+           
+            
+       
+        for (let index = 0; index < 7; index++) {
+             index = words;
+         gh.textContent = index
+            
+        }
+    
+        })
+         }, 1000);
+    </script>
+</body>
+</html>

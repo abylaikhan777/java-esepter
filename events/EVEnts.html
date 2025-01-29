@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+<body id="body">
+    <svg id="dark" width="100px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+    <h1 id="status">status</h1>
+    <button id="click">click me!</button>
+
+    <div id="div"><h1 id="text"></h1></div>
+    <div id="div2">
+        <h1 id="sura">asgdas</h1>
+        <h1 id="sura2">asdff</h1>
+    </div>
+    <div id="div3">
+        <button id="sura3">+</button>
+        <h1 id="bari">0</h1>
+        <button id="sura4">-</button>
+    </div>
+
+    <div id="div4">
+        <h1>ball</h1>
+        <div id="dongelek"></div>
+        <button id="sura5">olshemin ozgertu</button>
+    </div>
+   
+    <SCript>
+        const button = document.querySelector("#click");
+        const status = document.querySelector("#status");
+        const dark = document.querySelector("#dark");
+        const body = document.querySelector("#body");
+        const div = document.querySelector("#div");
+        const text = document.querySelector("#text");
+        const sura2 = document.querySelector('#sura2')
+        const sura = document.querySelector('#sura')
+
+
+
+        let sura3kos = 0;
+        const sura3 = document.querySelector('#sura3');
+        const sura4 = document.querySelector('#sura4');
+        const bari = document.querySelector('#bari');
+
+
+
+        let dongelek = document.querySelector('#dongelek');
+        const sura5 = document.querySelector('#sura5');
+        let donge = +prompt("Donge");
+
+        button.addEventListener("click", () => {
+            button.textContent = "Hello World!";
+        });
+        button.addEventListener("mouseenter", () => {
+            button.textContent = "you hovered";
+            button.style.backgroundColor = "red";
+        })
+        button.addEventListener("mouseleave", () => {
+            button.textContent = "tonkai";
+            button.style.opacity = "2";
+        });
+
+        button.addEventListener('dblclick', () => {
+            status.textContent = "tonkaaaai"
+        })
+        dark.addEventListener('click', () => {
+           body.style.backgroundColor = 'green'
+        })
+        dark.addEventListener('dblclick', () => {
+           body.style.backgroundColor = 'white'
+        })
+        div.addEventListener('mouseenter', () => {
+            div.style.backgroundColor = "lightblue";
+        })
+        div.addEventListener('mouseleave', () => {
+            div.style.backgroundColor = "white";
+        })
+        div.addEventListener('click', () => {
+            text.textContent = "clicked";
+        })
+        sura.addEventListener('click', () => {
+            div.style.backgroundColor = "purple";
+        })
+        sura2.addEventListener('click', () => {
+            div.style.backgroundColor = "lightblue";
+        })
+
+
+        sura3.addEventListener('click', () => {
+            sura3kos++;
+            bari.textContent = sura3kos;
+        })
+        sura4.addEventListener('click', () => {
+            sura3kos--;
+            bari.textContent = sura3kos;
+        })
+        sura5.addEventListener('click', () => {
+            let donge = +prompt("Donge");
+
+        });
+        dongelek.addEventListener('click', () => {
+            donge = dongelek.style.width =;
+        })
+        
+    </SCript>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="alll">
+        <h1 id="wrong">no the answer is A</h1>
+        <div class="after">
+    <h1 id="dissapered"></h1>
+    <h2 id="score">your score is</h2>
+</div>
+<button id="next"><a href=""></a></button>
+    <div class="all">
+    <div class="header">
+    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labot?</h1>
+    <div class="minithings">
+        <svg fill="#ffff" width="64px" height="64px" viewBox="-1344 -1344 4608.00 4608.00" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1158.513-.012v123.68h550.5L123.68 1708.878V1158.5H0V1920h761.5v-123.68H211.121l1585.21-1585.21v550.5h123.68V-.011z" fill-rule="evenodd"></path> </g></svg>
+        <svg width="73px" height="73px"  viewBox="-10.08 -10.08 44.16 44.16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8141 4.63965L5.75965 8.24995H3.75L3 8.99995V14.9999L3.75 15.7499H5.75965L10.8141 19.3602L12 18.7499V5.24995L10.8141 4.63965ZM6.75 9.38591L10.5 6.70734V17.2926L6.75 14.614V9.38591ZM5.25 9.74995H4.5V14.2499H5.25V9.74995ZM13.5698 8.98353C15.2652 10.6789 15.2652 13.4276 13.5698 15.1229L14.6305 16.1835C16.9116 13.9024 16.9116 10.204 14.6305 7.92287L13.5698 8.98353ZM15.9696 17.5229C18.9904 14.5021 18.9904 9.60439 15.9696 6.58356L17.0303 5.5229C20.6369 9.12952 20.6369 14.977 17.0303 18.5836L15.9696 17.5229Z" fill="#ffff"></path> </g></svg>
+    </div>
+</div>  
+    <div class="skip" style="font-size: 20px;
+    position: absolute;
+    right: 10px;
+    background-color: rgb(108, 199, 255);
+    border-radius: 6px;
+    padding: 5px;" >skip</div>
+    <div class="prehead">
+        <div class="timer">15</div>
+        <img style="width: 300px;
+        height: 300px;" src="https://images.squarespace-cdn.com/content/v1/569ecea9b20943c520056ca5/140ba162-4d10-48de-82b0-9490b7d6d2e4/david+goggins.jpeg" alt="" class="mainphoto">
+        <div class="answers">0 <span>answers</span></div>
+    </div>
+    <div id="btns">
+        <button class="btn" style="background-color: rgba(255, 0, 0, 0.752);">A</button>
+        <button class="btn" style="background-color: rgba(0, 0, 255, 0.74);">B</button>
+        <button class="btn" style="background-color: rgba(0, 128, 0, 0.821);">C</button>
+        <button class="btn" style="background-color: rgba(255, 255, 0, 0.808);">D</button>
+    </div>
+</div>
+</div>
+    <script>
+             let time = document.querySelector('.timer');
+             const des = document.querySelector('#dissapered');
+             let score = document.querySelector('#score');
+             let num = 0;
+             let after = document.querySelector('.after');
+             const btns = document.querySelectorAll('#btns');
+             let wrong = document.querySelector('#wrong');
+             let next = document.querySelector('#next');
+        let count = 15;
+       const all = document.querySelector('.all');
+
+        const interval = setInterval(() => {
+            count--;
+            time.textContent = `${count}`;
+            score.textContent = `your score is ${num}`;
+             
+            if (count === 0) {
+                 
+                setTimeout(() => {
+                    all.style.display = 'none';
+                    des.textContent = `the time was left`
+                   score.classList.add('score');
+                    des.classList.add('des');
+
+
+                    
+                }, 1000);
+                setTimeout(() => {
+                    after.style.display = 'none'
+                }, 4000);
+              
+             clearInterval(interval);
+
+            }
+        }, 1000); 
+
+        btns.forEach(button => {
+    button.addEventListener('click', (e) => {
+        setTimeout(() => {
+            
+        
+        if (e.target.textContent === 'A') {
+            num += 1;
+            all.style.display = 'none';
+            next.textContent = 'next question';
+            des.style.display = 'none';
+                    
+                   score.classList.add('score');
+                    next.classList.add('next');
+        } else {
+            all.style.display = 'none';
+            des.style.display = 'none';
+            wrong.classList.add('wrong'); 
+            score.classList.add('score');
+                // wrong.style.display = 'none';
+                // score.style.display = 'none';
+           
+
+            
+        }
+    }, 500);
+    });
+});
+    </script>
+</body>
+</html>

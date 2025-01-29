@@ -1,0 +1,30 @@
+.highlight{
+    background-color: yellow;
+}
+
+.default {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.like {
+    border:2px solid;
+    width: 100px;
+    height: 100px; 
+}
+.clicked {
+    background: red;
+}
+.def{
+    fill:none;
+}
+.clickedd {
+    fill: red;
+} 
+.body{
+    background-color: black;
+    color: aliceblue;
+}

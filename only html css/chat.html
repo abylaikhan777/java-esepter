@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Появление текста слева направо</title>
+    <style>
+        #text {
+            /* Изначально текст невидим */
+            transform: translateX(-100%); /* Сдвиг влево за границу экрана */
+            transition: all 1s ease; /* Анимация появления и перемещения */
+        }
+
+        #text.show {
+            /* Текст становится видимым */
+            transform: translateX(0); /* Перемещение текста на место */
+        }
+    </style>
+</head>
+<body>
+    <div id="text">Привет, мир!</div>
+    <button id="showButton">Показать текст</button>
+
+    <script>
+        const textElement = document.getElementById('text');
+        const button = document.getElementById('showButton');
+
+        button.addEventListener('click', () => {
+            textElement.classList.add('show'); // Добавляем класс для анимации
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imangaly lox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+    .forma {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+       
+}
+#btn{
+    width: 307px;
+     height: 50px;
+     border-radius: 10px;
+}
+body{
+    background-color: aliceblue;
+}
+input{
+    width: 300px;
+    height: 50px;
+     border-radius: 15px;
+}
+input:hover{
+    background-color: aliceblue;
+}
+
+
+
+    </style>
+    <!-- <div class="forma">
+            <input type="text" placeholder="name" id="name">
+            <input type="number" placeholder="age" id="age">
+            <input type="email" placeholder="email" id="email">
+            <input type="text" placeholder="+7" id="number">
+            <button id="submit" onclick="saktau()">submit</button>
+            <button id="korsety" onclick="Korsety()">korsety</button>
+            <button id="ochiru" onclick="Ochiru()">ochiru</button>
+            <div id="in"></div>
+
+    </div> -->
+    <label for="">
+        <h1>tys tandau</h1>
+         <input type="color" style="width: 50px;" id="color">
+        <button id="sak" onclick="Sak()">saktau</button>
+        <button id="tas" onclick="Tas()">tazalau</button>
+    </label>
+        
+    <script>
+        
+        const sak = document.querySelector("#sak");
+        const tas = document.querySelector("#tas");
+
+        function Sak() {
+            let color = document.querySelector("#color").value;
+            sessionStorage.setItem("color", color);
+            let tek = sessionStorage.getItem("color")
+            document.body.style.backgroundColor = `${tek}`;
+            korset()
+        }
+        function korset() {
+            let teka = sessionStorage.getItem("color")
+            document.body.style.backgroundColor = `${teka}`;
+        }
+        function Tas() {
+            sessionStorage.clear();
+            document.body.style.backgroundColor = `white`;
+
+        }
+        korset()
+    //     const submit = document.querySelector("#submit");
+    //     const korsety = document.querySelector("#korsety");
+    //     const ochiru = document.querySelector("#ochiru");
+    //     const inn = document.querySelector("#in")
+
+       
+    // function saktau() {
+    //     const name = document.querySelector("#name").value;
+    //     const age  = document.querySelector("#age").value;
+    //     const email = document.querySelector("#email").value;
+    //     const number = document.querySelector("#number").value;
+
+    //     sessionStorage.setItem("name", name);
+    //     sessionStorage.setItem("age", age);
+    //     sessionStorage.setItem("email", email);
+    //     sessionStorage.setItem("number", number);
+        
+      
+
+       
+            
+    //     };
+    //     function Korsety() {
+    //    const br = sessionStorage.getItem("name");
+    //    const tr = sessionStorage.getItem("age");
+    //    const fr = sessionStorage.getItem("email");
+    //    const kf = sessionStorage.getItem("number");
+    //         if (br && tr && fr && kf) {
+    //         inn.innerHTML = `
+    //         <h2>name is: ${br}</h2>
+    //         <h2>name is: ${tr}</h2>
+    //         <h2>name is: ${fr}</h2>
+    //         <h2>name is: ${kf}</h2>
+    //         `;
+    //     } 
+    //     };
+
+    //     function Ochiru() {
+    //         sessionStorage.clear();
+    //     };
+
+
+    </script>
+</body>
+</html>
